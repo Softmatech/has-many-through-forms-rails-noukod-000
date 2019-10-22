@@ -14,7 +14,8 @@
     <%= categories_fields.text_field :name %> <br> <br>
   <% end %>
 
-  
+  <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
+    <%= categories_fields.label "cat2" %> <br>
 
   <%= f.submit %>
 <% end %>
